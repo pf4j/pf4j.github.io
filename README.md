@@ -1,2 +1,1 @@
-# pf4j-site
-PF4J site repository
+[PF4J](http://pf4j.org) site repository.
