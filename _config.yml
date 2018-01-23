@@ -55,3 +55,6 @@ redcarpet:
         'tables',
         'hardwrap'
     ]
+
+codeurl: 'https://github.com/decebals/pf4j/tree/master'
+demourl: 'https://github.com/decebals/pf4j/tree/master/demo'
