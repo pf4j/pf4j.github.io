@@ -123,7 +123,7 @@ protected PluginDescriptorFinder createPluginDescriptorFinder() {
 
 and in plugin repository you must have a plugin.properties file with the below content:
 
-```
+```properties
 plugin.class=org.pf4j.demo.welcome.WelcomePlugin
 plugin.dependencies=x, y, z
 plugin.id=welcome-plugin
@@ -142,7 +142,7 @@ It's most likely that they are some problems with the annotation processing mech
 O possible solution to resolve your problem is to add a configuration to your maven build.
 The `maven-compiler-plugin` can be configured to do this like so:
 
-```
+```xml
 <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-compiler-plugin</artifactId>
