@@ -15,7 +15,7 @@ google_analytics_id: 'UA-112947599-1'
 navigation: 2
 
 # URL to source code, used in _includes/footer.html
-projecturl: 'https://github.com/decebals/pf4j'
+projecturl: 'https://github.com/pf4j/pf4j'
 
 # Default categories (in order) to appear in the navigation
 sections: [
@@ -56,5 +56,5 @@ redcarpet:
         'hardwrap'
     ]
 
-codeurl: 'https://github.com/decebals/pf4j/tree/master'
-demourl: 'https://github.com/decebals/pf4j/tree/master/demo'
+codeurl: 'https://github.com/pf4j/pf4j/tree/master'
+demourl: 'https://github.com/pf4j/pf4j/tree/master/demo'
