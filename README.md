@@ -7,7 +7,7 @@ Requirements:
 - [Jekyll](http://jekyllrb.com/)
 
 Steps:
-- create a local clone of this repository (with `git clone https://github.com/decebals/pf4j-site.git`)
+- create a local clone of this repository (with `git clone https://github.com/pf4j/pf4j-site.git`)
 - go to project's folder (with `cd pf4j-site`) 
 - make some modifications (see below sections)
 - test on your computer the modifications (see below sections)

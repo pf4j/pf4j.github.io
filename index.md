@@ -8,7 +8,7 @@ title: "PF4J"
 A plugin is a way for a third party to extend the functionality of an application. A plugin implements extension points
 declared by application or other plugins. Also a plugin can define extension points.  
 
-**NOTE:** Starting with version 0.9 you can define an extension directly in the application jar (you're not obligated to put the extension in a plugin - you can see this extension as a default/system extension). See [WhazzupGreeting](https://github.com/decebals/pf4j/blob/master/demo/app/src/main/java/org/pf4j/demo/WhazzupGreeting.java) for a real example.
+**NOTE:** Starting with version 0.9 you can define an extension directly in the application jar (you're not obligated to put the extension in a plugin - you can see this extension as a default/system extension). See [WhazzupGreeting](https://github.com/pf4j/pf4j/blob/master/demo/app/src/main/java/org/pf4j/demo/WhazzupGreeting.java) for a real example.
   
 #### Features/Benefits
 
@@ -18,16 +18,16 @@ PF4J is an open source (Apache license) lightweight (around __50 KB__) plugin fr
 Practically PF4J is a microframework and the aim is to keep the core simple but extensible. I try to create a little ecosystem (extensions) based on this core with the help of the comunity.  
 For now are available these extensions:
 
-- [pf4j-update](https://github.com/decebals/pf4j-update) (update mechanism for PF4J)
-- [pf4j-spring](https://github.com/decebals/pf4j-spring) (PF4J - Spring Framework integration)
-- [pf4j-web](https://github.com/rmrodrigues/pf4j-web) (PF4J in web applications)
-- [wicket-plugin](https://github.com/decebals/wicket-plugin) (Wicket Plugin Framework based on PF4J)
+- [pf4j-update](https://github.com/pf4j/pf4j-update) (update mechanism for PF4J)
+- [pf4j-spring](https://github.com/pf4j/pf4j-spring) (PF4J - Spring Framework integration)
+- [pf4j-web](https://github.com/pf4j/pf4j-web) (PF4J in web applications)
+- [pf4j-wicket](https://github.com/pf4j/pf4j-wicket) (Wicket Plugin Framework based on PF4J)
 
 No XML, only Java.
 
 You can mark any interface or abstract class as an extension point (with marker interface ExtensionPoint) and you specified that an class is an extension with @Extension annotation.
 
-Also, PF4J can be used in web applications. For my web applications when I want modularity I use [Wicket Plugin](https://github.com/decebals/wicket-plugin).
+Also, PF4J can be used in web applications. For my web applications when I want modularity I use [Wicket Plugin](https://github.com/pf4j/pf4j-wicket).
 
 #### Components
 
