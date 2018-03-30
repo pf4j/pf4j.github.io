@@ -20,8 +20,8 @@ For now are available these extensions:
 
 - [pf4j-update](https://github.com/pf4j/pf4j-update) (update mechanism for PF4J)
 - [pf4j-spring](https://github.com/pf4j/pf4j-spring) (PF4J - Spring Framework integration)
-- [pf4j-web](https://github.com/rmrodrigues/pf4j-web) (PF4J in web applications)
-- [wicket-plugin](https://github.com/pf4j/pf4j-wicket) (Wicket Plugin Framework based on PF4J)
+- [pf4j-web](https://github.com/pf4j/pf4j-web) (PF4J in web applications)
+- [pf4j-wicket](https://github.com/pf4j/pf4j-wicket) (Wicket Plugin Framework based on PF4J)
 
 No XML, only Java.
 
