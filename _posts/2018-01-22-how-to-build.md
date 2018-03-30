@@ -14,7 +14,7 @@ Requirements:
 
 Steps:
 
-- create a local clone of this repository (with `git clone https://github.com/decebals/pf4j.git`)
+- create a local clone of this repository (with `git clone https://github.com/pf4j/pf4j.git`)
 - go to project's folder (with `cd pf4j`)
 - build the artifacts (with `mvn clean package` or `mvn clean install`)
 

@@ -6,7 +6,7 @@ date: 2018-01-23 20:02:17
 order: 20
 ---
 
-Each plugin passes through a pre-defined set of states. [PluginState](https://github.com/decebals/pf4j/blob/master/pf4j/src/main/java/org/pf4j/PluginState.java) defines all possible states.   
+Each plugin passes through a pre-defined set of states. [PluginState](https://github.com/pf4j/pf4j/blob/master/pf4j/src/main/java/org/pf4j/PluginState.java) defines all possible states.   
 The primary plugin states are:
 
 * CREATED
