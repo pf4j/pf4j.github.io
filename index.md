@@ -25,7 +25,7 @@ For now are available these extensions:
 
 No XML, only Java.
 
-You can mark any interface or abstract class as an extension point (with marker interface ExtensionPoint) and you specified that an class is an extension with @Extension annotation.
+You can mark any interface or abstract class as an extension point (with marker interface `ExtensionPoint`) and you specified that an class is an extension with `@Extension` annotation.
 
 #### Components
 
