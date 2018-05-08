@@ -21,9 +21,12 @@ public static void main(String[] args) {
 ```
 
 In above code, I created a **DefaultPluginManager** (it's the default implementation for
-**PluginManager** interface) that loads and starts all active(resolved) plugins.  
-Each available plugin is loaded using a different java class loader, **PluginClassLoader**.   
-The **PluginClassLoader** contains only classes found in **PluginClasspath** (default _classes_ and _lib_ folders) of plugin and runtime classes and libraries of the required/dependent plugins. This class loader is a _Parent Last ClassLoader_ - it loads the classes from the plugin's jars before delegating to the parent class loader.   
+**PluginManager** interface) that loads and starts all active(resolved) plugins.
+
+Each available plugin is loaded using a different java class loader, **PluginClassLoader**.
+
+The **PluginClassLoader** contains only classes found in **PluginClasspath** (default _classes_ and _lib_ folders) of plugin and runtime classes and libraries of the required/dependent plugins. This class loader is a _Parent Last ClassLoader_ - it loads the classes from the plugin's jars before delegating to the parent class loader.
+
 The plugins are stored in a folder. You can specify the plugins folder in the constructor of DefaultPluginManager. If the plugins folder is not specified
 then the location is returned by `System.getProperty("pf4j.pluginsDir", "plugins")`.
 
@@ -38,8 +41,10 @@ A plugin folder has this structure by default:
 * `classes` folder
 * `lib` folder (optional - if the plugin used third party libraries)
 
-The plugin manager searches plugins metadata using a **PluginDescriptorFinder**.   
+The plugin manager searches plugins metadata using a **PluginDescriptorFinder**.
+
 **DefaultPluginDescriptorFinder** is a "link" to **ManifestPluginDescriptorFinder** that lookups plugins descriptors in MANIFEST.MF file.
+
 In this case the `classes/META-INF/MANIFEST.MF` file looks like:
 
 ```
@@ -70,8 +75,10 @@ public interface Greeting extends ExtensionPoint {
 }
 ```
 
-Another important internal component is **ExtensionFinder** that describes how the plugin manager discovers extensions for the extensions points.   
-**DefaultExtensionFinder** looks up extensions using **Extension** annotation.   
+Another important internal component is **ExtensionFinder** that describes how the plugin manager discovers extensions for the extensions points.
+
+**DefaultExtensionFinder** looks up extensions using **Extension** annotation.
+
 DefaultExtensionFinder looks up extensions in all extensions index files `META-INF/extensions.idx`. PF4J uses Java Annotation Processing to process at compile time all classes annotated with @Extension and to produce the extensions index file.
 
 ```java
