@@ -63,7 +63,7 @@ Plugin-Version: 0.0.1
 In above manifest I described a plugin with id `welcome-plugin`, with class `org.pf4j.demo.welcome.WelcomePlugin`, with version `0.0.1` and with dependencies
 to plugins `x, y, z`.
 
-**NOTE:** The plugin version must be compliant with [Semantic Versioning](http://semver.org) (PF4J uses `jsemver` as implementation for SemVer because it comes with support for comparing versions)
+**NOTE:** The plugin version must be compliant with [Semantic Versioning](https://semver.org) (PF4J uses `jsemver` as implementation for SemVer because it comes with support for comparing versions)
 
 You can define an extension point in your application using **ExtensionPoint** interface marker.
 

@@ -10,4 +10,4 @@ After you developed a plugin the next step is to deploy it in your application. 
 
 If you use [Apache Maven](https://maven.apache.org) as build manger then your pom.xml file must looks like [this]({{ site.demourl }}/plugins/plugin1/pom.xml). This file it's very simple and it's self explanatory.
 
-If you use [Apache Ant](http://ant.apache.org) then your build.xml file must looks like [this](https://github.com/gitblit/gitblit-powertools-plugin/blob/master/build.xml). In this case please look at the "build" target.
+If you use [Apache Ant](https://ant.apache.org) then your build.xml file must looks like [this](https://github.com/gitblit/gitblit-powertools-plugin/blob/master/build.xml). In this case please look at the "build" target.

@@ -1,10 +1,10 @@
-[PF4J](http://pf4j.org) site repository.
+[PF4J](https://www.pf4j.org) site repository.
 
 How to build
 -------------------
 Requirements: 
-- [Git](http://git-scm.com/) 
-- [Jekyll](http://jekyllrb.com/)
+- [Git](https://git-scm.com/) 
+- [Jekyll](https://jekyllrb.com/)
 
 Steps:
 - create a local clone of this repository (with `git clone https://github.com/pf4j/pf4j.github.io.git`)
@@ -15,8 +15,8 @@ Steps:
 
 Install Jekyll
 -------------------
-- [Linux](http://antoine-schellenberger.com/linux/2013/11/07/install_jekyll_on_ubuntu_1204.html)
-- [Windows](http://www.madhur.co.in/blog/2011/09/01/runningjekyllwindows.html)
+- [Linux](https://antoine-schellenberger.com/linux/2013/11/07/install_jekyll_on_ubuntu_1204.html)
+- [Windows](https://www.madhur.co.in/blog/2011/09/01/runningjekyllwindows.html)
 
 Create new page
 -------------------
@@ -44,7 +44,7 @@ Example:
 ./bin/jekyll-page "My New Page" ref
 ```
 
-Will produce a file `_posts/2013-06-05-my-new-page.md` with the [front-matter](http://jekyllrb.com/docs/frontmatter/) already defined:
+Will produce a file `_posts/2013-06-05-my-new-page.md` with the [front-matter](https://jekyllrb.com/docs/frontmatter/) already defined:
 
 ```html
 ---

@@ -8,9 +8,9 @@ order: 30
 
 Requirements: 
 
-- [Git](http://git-scm.com/)
+- [Git](https://git-scm.com/)
 - JDK 7 (test with `java -version`)
-- [Apache Maven 3](http://maven.apache.org/) (test with `mvn -version`)
+- [Apache Maven 3](https://maven.apache.org/) (test with `mvn -version`)
 
 Steps:
 
