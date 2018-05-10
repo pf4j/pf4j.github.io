@@ -18,4 +18,4 @@ And constructed with the following guidelines:
 * New additions without breaking backward compatibility bumps the minor
 * Bug fixes and misc changes bump the patch
 
-For more information on SemVer, please visit http://semver.org/.
+For more information on SemVer, please visit https://semver.org/.
