@@ -9,7 +9,7 @@ order: 37
 To create extensions instances, PF4J uses an [ExtensionFactory]({{ site.codeurl }}/pf4j/src/main/java/org/pf4j/ExtensionFactory.java).
 By default, PF4J uses `DefaultExtensionFactory` as implementation of `ExtensionFactory`.
 
-You can change the default implementation with
+You can change the default implementation with:
 ```java
 new DefaultPluginManager() {
     

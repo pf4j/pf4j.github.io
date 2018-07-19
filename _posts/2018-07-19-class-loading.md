@@ -35,7 +35,6 @@ new DefaultPluginManager() {
     }
 
 };
-
 ```
 
 If you want to know what plugin loaded a specific class you can use:
