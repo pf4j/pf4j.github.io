@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Custom PluginManager"
+title: "Custom manager"
 category: doc
 date: 2018-01-23 20:27:36
 order: 25

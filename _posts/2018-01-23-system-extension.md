@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Default/System extension"
+title: "System extension"
 category: doc
 date: 2018-01-23 21:23:38
 order: 40

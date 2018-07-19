@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Enable/Disable plugins"
+title: "Disable plugins"
 category: doc
 date: 2018-01-23 21:21:37
 order: 35
