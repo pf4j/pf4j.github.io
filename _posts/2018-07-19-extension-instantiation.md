@@ -31,7 +31,7 @@ plugin.getExtensions(MyExtensionPoint.class);
 ``` 
 then for each call, a new extension instance is created.
 
-If you want to return the same extension instance (singleton), you need to use [SingletonExtensionFactory]({{ site.codeurl }}/pf4j/src/main/java/org/pf4j/SingletonExtensionFactory.java).
+If you want to return the same extension instance (singleton), you need to use [SingletonExtensionFactory]({{ site.codeurl }}/pf4j/src/main/java/org/pf4j/SingletonExtensionFactory.java):
 ```java
 new DefaultPluginManager() {
     
