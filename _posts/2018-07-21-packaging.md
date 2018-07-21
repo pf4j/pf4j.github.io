@@ -14,7 +14,7 @@ Currently, PF4J supports builtin two types of packaging
 The first versions of PF4J came by default only with support for `.zip` format.  
 To install a plugin in your application you need to add it to `plugins` (pluginsRoot) directory.
 Your content of `plugins` directory can look like:
-```
+```bash
 $ tree plugins
 plugins
 ├── disabled.txt
@@ -23,7 +23,7 @@ plugins
 └── demo-plugin2-2.4.0.zip
 ```
 or
-```
+```bash
 $ tree plugins
 plugins
 ├── disabled.txt
@@ -34,7 +34,7 @@ plugins
 if you use `.jar` plugin packaging format.
 
 If you want, you can mix multiple packaging format. For example, by default, you can mix `.jar` plugins with `.zip` plugins:
-```
+```bash
 $ tree plugins
 plugins
 ├── disabled.txt
