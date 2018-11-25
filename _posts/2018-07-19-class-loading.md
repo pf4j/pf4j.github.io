@@ -42,4 +42,18 @@ If you want to know what plugin loaded a specific class you can use:
 pluginManager.whichPlugin(MyClass.class);
 ```
 
+PF4J uses by default a separate class loader for each plugin but this doesn't mean that you cannot use the same class loader 
+(probably the application class loader) for all plugins.
+If your application requires this use case then what you must to do is to return the same class loader from `PluginLoader.loadPlugin`:
 
+```java
+public interface PluginLoader {
+
+    boolean isApplicable(Path pluginPath);
+
+    ClassLoader loadPlugin(Path pluginPath, PluginDescriptor pluginDescriptor);
+
+}
+```
+
+If you use `DefaultPluginManager` you can choose to override `DefaultPluginManager.createPluginLoader` and/or `DefaultPluginLoader.createClassLoader`.
