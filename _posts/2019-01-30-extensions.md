@@ -17,7 +17,9 @@ import javax.swing.JMenuBar;
 import org.pf4j.ExtensionPoint;
 
 interface MainMenuExtensionPoint extends ExtensionPoint {
+
     void buildMenuBar(JMenuBar menuBar);
+
 }
 ```
 
@@ -35,11 +37,13 @@ import org.pf4j.Extension;
 
 @Extension
 public class MyMainMenuExtension implements MainMenuExtensionPoint {
+
     public void buildMenuBar(JMenuBar menuBar) {
         JMenu exampleMenu = new JMenu("Example");
         exampleMenu.add(new JMenuItem("Hello World"));
         menuBar.add(exampleMenu);
     }
+
 }
 ```
 
@@ -59,6 +63,7 @@ import org.pf4j.DefaultPluginManager;
 import org.pf4j.PluginManager;
 
 public static void main(String[] args) {
+
     // Init the plugin environment.
     // This should be done once during the boot process of the application.
     PluginManager pluginManager = new DefaultPluginManager();
@@ -67,6 +72,7 @@ public static void main(String[] args) {
 
     // Launch Swing application.
     java.awt.EventQueue.invokeLater(new Runnable() {
+
         public void run() {
             // Build the menu bar by using the available extensions.
             JMenuBar mainMenu = new JMenuBar();
@@ -81,14 +87,15 @@ public static void main(String[] args) {
             dialog.setJMenuBar(mainMenu);
             dialog.setVisible(true);
         }
+
     });
+
 }
 ```
 
 ### Additional extension parameters
 
 The `@Extension` annotation can provide some further options, that might be helpful in certain situations.
-
 
 #### Ordering extensions
 
@@ -97,11 +104,13 @@ Let's assume we have multiple extensions for the menu bar and we like to have co
 ```java
 @Extension(ordinal = 1)
 public class FirstMainMenuExtension implements MainMenuExtensionPoint {
+
     public void buildMenuBar(JMenuBar menuBar) {
         JMenu menu = new JMenu("First");
         menu.add(new JMenuItem("Hello World"));
         menuBar.add(menu);
     }
+
 }
 ```
 
@@ -110,16 +119,17 @@ By defining `@Extension(ordinal = 1)` the plugin manager will always load this e
 ```java
 @Extension(ordinal = 2)
 public class SecondMainMenuExtension implements MainMenuExtensionPoint {
+
     public void buildMenuBar(JMenuBar menuBar) {
         JMenu menu = new JMenu("Second");
         menu.add(new JMenuItem("Hello World"));
         menuBar.add(menu);
     }
+
 }
 ```
 
 By defining `@Extension(ordinal = 2)` the plugin manager will always load this extension after the first one.
-
 
 #### Explicitly configure an extension point
 
@@ -136,14 +146,15 @@ In this scenario it is necessary to explicitly register the extension point in t
 ```java
 @Extension(points = {MainMenuExtensionPoint.class})
 public class Plugin1MainMenuExtension extends MainMenuAdapter {
+
     public void buildMenuBar(JMenuBar menuBar) {
         // some implementation...
     }
+
 }
 ```
 
 Otherwise PF4J might not be able to automatically detect the correct extension points for the extension at compile time (as described in [issue #264](https://github.com/pf4j/pf4j/issues/264)).
-
 
 #### Explicitly configure plugin dependencies
 
@@ -165,6 +176,7 @@ But those optional dependencies might lead to the situation, that a certain exte
 ```java
 @Extension(plugins = {ContactsPlugin.ID, CalendarPlugin.ID})
 public class CalendarContactsFormExtension implements ContactsFormExtension {
+
     public JPanel getPanel() {
         // some implementation...
     }
@@ -174,21 +186,26 @@ public class CalendarContactsFormExtension implements ContactsFormExtension {
     public void load(ContactsEntry save) {
         // some implementation...
     }
+
 }
 ```
 
 ```java
 @Extension(plugins = {ContactsPlugin.ID, CalendarPlugin.ID})
 public class ContactsCalendarFormExtension implements CalendarFormExtension {
+
     public JPanel getPanel() {
         // some implementation...
     }
+
     public void load(CalendarEntry entry) {
         // some implementation...
     }
+
     public void load(CalendarEntry save) {
         // some implementation...
     }
+
 }
 ```
 
