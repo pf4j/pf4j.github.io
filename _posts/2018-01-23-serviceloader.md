@@ -44,10 +44,14 @@ For example if I want to use `ServiceProviderExtensionStorage` then the value fo
 not added/enabled by default. To do this please override `createExtensionFinder` from `DefaultPluginManager`:
 
 ```java
-protected ExtensionFinder createExtensionFinder() {
-    DefaultExtensionFinder extensionFinder = super.createExtensionFinder();
-    extensionFinder.addServiceProviderExtensionFinder();
+final PluginManager pluginManager = new DefaultPluginManager() {
 
-    return extensionFinder;
-}
+    protected ExtensionFinder createExtensionFinder() {
+        DefaultExtensionFinder extensionFinder = (DefaultExtensionFinder) super.createExtensionFinder();
+        extensionFinder.addServiceProviderExtensionFinder();
+
+        return extensionFinder;
+    }
+
+};
 ```
