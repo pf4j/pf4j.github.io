@@ -63,7 +63,6 @@ import org.pf4j.DefaultPluginManager;
 import org.pf4j.PluginManager;
 
 public static void main(String[] args) {
-
     // Init the plugin environment.
     // This should be done once during the boot process of the application.
     PluginManager pluginManager = new DefaultPluginManager();
