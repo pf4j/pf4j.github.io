@@ -57,6 +57,7 @@ Please notice the `@Extension` annotation. This annotation marks the class as a 
 According to the example above the application can build the menu bar like this:
 
 ```java
+import javax.swing.JDialog;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import org.pf4j.DefaultPluginManager;
@@ -65,7 +66,7 @@ import org.pf4j.PluginManager;
 public static void main(String[] args) {
     // Init the plugin environment.
     // This should be done once during the boot process of the application.
-    PluginManager pluginManager = new DefaultPluginManager();
+    final PluginManager pluginManager = new DefaultPluginManager();
     pluginManager.loadPlugins();
     pluginManager.startPlugins();
 
