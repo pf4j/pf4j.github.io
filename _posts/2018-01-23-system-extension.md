@@ -6,8 +6,8 @@ date: 2018-01-23 21:23:38
 order: 40
 ---
 
-Starting with version 0.9 you can define an extension directly in the application jar (you're not obligated
-to put the extension in a plugin - you can see this extension as a default/system extension).
+An extension can also be defined directly in the application jar (i.e., you’re not obligated
+to put the extension in a plugin — you can see this extension as a default, or _system extension_).
 See [WhazzupGreeting]({{ site.demourl }}/app/src/main/java/org/pf4j/demo/WhazzupGreeting.java)
 for a real example.
 
@@ -16,9 +16,9 @@ This is great for starting application phase. In this scenario you have a minima
 but with the following benefits:
 - no need to write provider-configuration files in the resource directory `META-INF/services`, you using the elegant
  `@Extension` annotation from PF4J
-- anytime you can switch to the multiple class loader mechanism without to change one code line in your application  
+- anytime you can switch to the multiple class loader mechanism with no code changes in your application
 
-Of course the code present in the `Boot` class from the demo application it is functional but you can use a more minimalist code
+The code present in the `Boot` class from the demo application is functional but you can use a more minimalist code
 skipping `pluginManager.loadPlugins()` and `pluginManager.startPlugins()`.
 
 ```java
