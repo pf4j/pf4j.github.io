@@ -6,10 +6,8 @@ title: "PF4J"
 <img src="{{ site.baseurl }}/pf4j-logo.svg" width="250"/>
 
 A plugin is a way for a third party to extend the functionality of an application. A plugin implements extension points
-declared by application or other plugins. Also a plugin can define extension points.  
+declared by application or other plugins. Also a plugin can define extension points.
 
-**NOTE:** Starting with version 0.9 you can define an extension directly in the application jar (you're not obligated to put the extension in a plugin - you can see this extension as a default/system extension). See [WhazzupGreeting](https://github.com/pf4j/pf4j/blob/master/demo/app/src/main/java/org/pf4j/demo/WhazzupGreeting.java) for a real example.
-  
 #### Features/Benefits
 
 With PF4J you can easily transform a monolithic java application in a modular application.  
