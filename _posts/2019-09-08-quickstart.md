@@ -35,4 +35,4 @@ cd myproject
 ./run.sh
 ```
 
-For more information, please see https://github.com/pf4j/pf4j/issues/306#issuecomment-493198655.
+For more information, please see [this](https://github.com/pf4j/pf4j/issues/306#issuecomment-493198655) comment.
