@@ -16,4 +16,4 @@ If file `extensions.idx` exists, and it's not empty then sure you have a class l
 
 If the problem persist, or you want to find more info related to the extensions' discovery process (e.g what interfaces/classes are loaded by each plugin, what classes are not recognized as extensions for an extension point) then you must put on `TRACE` level the logger for `PluginClassLoader` and `AbstractExtensionFinder` (see the [log4j2.properties]({{ site.demourl }}/app/src/main/resources/log4j2.properties) file for demo).   
 
-Are some resources on the internet related to this subject: [#82](https://github.com/pf4j/pf4j/issues/82), [#64](https://github.com/pf4j/pf4j/issues/64) and [No extensions found] (https://groups.google.com/forum/#!topic/pf4j/tEQXY_WpD3A).
+Are some resources on the internet related to this subject: [#82](https://github.com/pf4j/pf4j/issues/82), [#64](https://github.com/pf4j/pf4j/issues/64) and [No extensions found](https://groups.google.com/forum/#!topic/pf4j/tEQXY_WpD3A).
