@@ -30,6 +30,8 @@ The **PluginClassLoader** contains only classes found in **PluginClasspath** (de
 The plugins are stored in a folder. You can specify the plugins folder in the constructor of DefaultPluginManager. If the plugins folder is not specified
 then the location is returned by `System.getProperty("pf4j.pluginsDir", "plugins")`.
 
+**NOTE:** The "pf4j.pluginsDir" property comes with comma-separated directory list support (support for multiple plugin root directories). 
+
 The structure of plugins folder is:
 
 * plugin1.zip (or plugin1 folder)
