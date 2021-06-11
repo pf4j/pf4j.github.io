@@ -33,3 +33,7 @@ You can mark any interface or abstract class as an extension point (with marker 
 - **ExtensionPoint** is a point in the application where custom code can be invoked. It's a java interface marker.   
 Any java interface or abstract class can be marked as an extension point (implements `ExtensionPoint` interface).
 - **Extension** is an implementation of an extension point. It's a java annotation on a class.
+
+#### Java version
+
+The current minimum Java version required to build PF4J should be 9, but the runtime Java version can be 8 since the artifact is a multi-release jar.
