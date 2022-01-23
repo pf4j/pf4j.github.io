@@ -22,7 +22,7 @@ To create your project you must follow these steps:
 mvn archetype:generate \
   -DarchetypeGroupId=org.pf4j \
   -DarchetypeArtifactId=pf4j-quickstart \
-  -DarchetypeVersion=3.1.0 \
+  -DarchetypeVersion=3.6.0 \
   -DgroupId=com.mycompany \
   -DartifactId=myproject
 ```
