@@ -18,7 +18,7 @@ To create your project you must follow these steps:
 
 - create your quickstart project:
 
-```
+```bash
 mvn archetype:generate \
   -DarchetypeGroupId=org.pf4j \
   -DarchetypeArtifactId=pf4j-quickstart \
