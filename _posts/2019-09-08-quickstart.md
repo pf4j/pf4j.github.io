@@ -32,6 +32,7 @@ maybe you want to change `groupId`, `artifactId` and `archetypeVersion` (the lat
 
 ```
 cd myproject
+chmod u+x run.sh
 ./run.sh
 ```
 
