@@ -30,7 +30,7 @@ maybe you want to change `groupId`, `artifactId` and `archetypeVersion` (the lat
 
 - run your application from command line:
 
-```
+```bash
 cd myproject
 chmod u+x run.sh
 ./run.sh
