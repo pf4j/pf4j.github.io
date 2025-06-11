@@ -4,7 +4,7 @@ subtitle: 'Plugin Framework for Java'
 
 plugins:
   - jekyll-seo-tag
-  
+
 # if you wish to integrate disqus on pages set your shortname here
 disqus_shortname: ''
 
@@ -60,4 +60,4 @@ kramdown:
     ]
 
 codeurl: 'https://github.com/pf4j/pf4j/tree/master'
-demourl: 'https://github.com/pf4j/pf4j/tree/master/demo'
+demourl: 'https://github.com/pf4j/pf4j/tree/master/demo/maven'
