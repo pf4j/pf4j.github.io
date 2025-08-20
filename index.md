@@ -34,7 +34,7 @@ PF4J is an open source (Apache license) lightweight (around **100 KB**) plugin f
 - **Simple:** No XML configuration, pure Java
 - **Alternative to OSGi:** Easy to learn and implement
 
-Practically, PF4J is a microframework that aims to keep the core simple but extensible. We also have a community-driven ecosystem of extensions.
+Practically, PF4J is a microframework that aims to keep the core simple but extensible. PF4J also provides a community-driven ecosystem of extensions.
 
 #### Components
 
