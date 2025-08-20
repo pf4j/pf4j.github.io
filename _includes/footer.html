@@ -1,1 +1,21 @@
-Documentation for <a href="{% if site.projecturl %}{{ site.projecturl }}{% else %}{{ site.baseurl }}{% endif %}">{{ site.title }}</a>
+<div style="text-align: center;">
+    <div style="font-size: 0.9em; color: #aaa; margin-bottom: 8px;">
+        Documentation for <a href="{% if site.projecturl %}{{ site.projecturl }}{% else %}{{ site.baseurl }}{% endif %}" style="color: #666;">{{ site.title }}</a>
+    </div>
+
+    <div class="site-actions" style="font-size: 0.85em; color: #888;">
+        <a href="https://github.com/pf4j/pf4j.github.io/edit/master/{{ page.path }}"
+           target="_blank"
+           style="color: #666; text-decoration: none; margin: 0 8px;">
+            ✏️ Edit this page
+        </a>
+        |
+        <a href="https://github.com/pf4j/pf4j.github.io" target="_blank" style="color: #666; text-decoration: none; margin: 0 8px;">
+            📝 Improve docs
+        </a>
+        |
+        <a href="https://github.com/pf4j/pf4j.github.io/issues" target="_blank" style="color: #666; text-decoration: none; margin: 0 8px;">
+            🐛 Report issue
+        </a>
+    </div>
+</div>
