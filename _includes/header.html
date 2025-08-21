@@ -1,4 +1,12 @@
-<h4><a class=brand href="{{ site.baseurl }}/">{{ site.title }}</a>
-    {% if site.subtitle %}<small>{{ site.subtitle }}</small>{% endif %}
-</h4>
-
+<div class="row-fluid">
+    <div class="span8">
+        <h4><a class="brand" href="https://github.com/pf4j/pf4j" target="_blank" title="PF4J on GitHub">{{ site.title }}</a>
+            {% if site.subtitle %}<small>{{ site.subtitle }}</small>{% endif %}
+        </h4>
+    </div>
+    <div class="span4">
+        <div class="pull-right" style="margin-top: 5px;">
+            {% include search.html %}
+        </div>
+    </div>
+</div>

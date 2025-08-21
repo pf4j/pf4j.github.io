@@ -11,17 +11,10 @@
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
         <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
         <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/search.css">
         {% seo %}
     </head>
     <body>
-        <a href="https://github.com/pf4j/pf4j">
-            <img loading="lazy" width="149" height="149"
-                 src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
-                 class="attachment-full size-full"
-                 alt="Fork me on GitHub"
-                 style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;">
-        </a>
-
         <div class="container">
             <div class=row-fluid>
                 <div id=header class=span12>
@@ -124,8 +117,15 @@
 
             if (document.querySelectorAll) orderNav();
         </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://unpkg.com/lunr/lunr.js"></script>
+        <script>
+            {% include search.js %}
+        </script>
+
         {% if site.google_analytics_id != "" %}
-        {% include google_analytics.html %}
+            {% include google_analytics.html %}
         {% endif %}
     </body>
 </html>

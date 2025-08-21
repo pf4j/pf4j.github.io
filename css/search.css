@@ -1,0 +1,188 @@
+/* FIX 1: Make search box larger */
+.search-container .input-append input {
+    width: 250px !important; /* Increased from 180px */
+    margin-bottom: 0;
+    font-size: 14px;
+    padding: 6px 8px;
+}
+
+/* FIX 2: Ensure results are overlay above content */
+#search-results {
+    position: absolute !important;
+    top: 100% !important;
+    right: 0;
+    width: 400px; /* Wider results */
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Stronger shadow */
+    z-index: 9999 !important; /* High z-index to be above everything */
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 0; /* Remove gap - was 1px */
+    display: none;
+}
+
+/* Ensure search container has proper positioning context */
+.search-container {
+    position: relative !important;
+    z-index: 10000 !important;
+}
+
+/* Better result styling */
+.search-result {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    background: white;
+}
+
+.search-result:hover,
+.search-result.selected {
+    background-color: #f5f5f5;
+}
+
+.search-result:last-child {
+    border-bottom: none;
+    border-radius: 0 0 4px 4px;
+}
+
+.search-result a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.search-result a:hover {
+    text-decoration: none;
+}
+
+.result-title {
+    font-weight: bold;
+    color: #0088cc;
+    margin-bottom: 4px;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.result-category {
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.result-preview {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+    max-height: 2.8em; /* Limit to 2 lines */
+    overflow: hidden;
+}
+
+/* Enhanced highlighting */
+.search-result strong {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 1px 3px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+/* Loading and empty states */
+.search-loading,
+.search-no-results {
+    padding: 15px;
+    color: #999;
+    text-align: center;
+    font-style: italic;
+    background: white;
+}
+
+/* Keyboard navigation enhancement */
+.search-result.selected {
+    background-color: #0088cc !important;
+    color: white;
+}
+
+.search-result.selected .result-title {
+    color: white;
+}
+
+.search-result.selected .result-category {
+    color: #cce7f0;
+}
+
+.search-result.selected .result-preview {
+    color: #e6f3f8;
+}
+
+.search-result.selected strong {
+    background-color: #005580;
+    color: #cce7f0;
+}
+
+/* Clear button improvements */
+#search-clear {
+    font-size: 16px;
+    line-height: 1;
+    color: #999;
+    border-left: 1px solid #ccc;
+    padding: 6px 10px;
+}
+
+#search-clear:hover {
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Focus styles */
+#search-input:focus {
+    border-color: #0088cc;
+    box-shadow: 0 0 5px rgba(0, 136, 204, 0.3);
+    outline: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .search-container .input-append input {
+        width: 200px !important;
+    }
+
+    #search-results {
+        left: 0;
+        right: 0;
+        width: auto;
+        max-width: none;
+    }
+
+    .result-title {
+        font-size: 13px;
+    }
+
+    .result-preview {
+        font-size: 11px;
+        max-height: 1.4em; /* Single line on mobile */
+    }
+}
+
+/* Ensure results appear above Bootstrap content */
+.search-container {
+    z-index: 1050 !important; /* Higher than Bootstrap modal backdrop */
+}
+
+#search-results {
+    z-index: 1051 !important;
+}
+
+/* Print styles - hide search completely */
+@media print {
+    .search-container {
+        display: none !important;
+    }
+
+    .brand::after {
+        display: none;
+    }
+}

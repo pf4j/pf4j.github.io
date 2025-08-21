@@ -1,0 +1,34 @@
+---
+# search-data.json - Full content search index
+# Place this file in the root directory of your Jekyll site
+layout: null
+sitemap: false
+---
+{
+  "version": "{{ site.time | date: '%Y%m%d%H%M%S' }}",
+  "site": "{{ site.title }}",
+  "items": [
+    {% assign all_docs = site.pages | concat: site.posts %}
+    {% assign doc_count = 0 %}
+    {% for item in all_docs %}
+      {% if item.title and item.url != '/404.html' and item.layout and item.url != '/search-data.json' %}
+        {% assign doc_count = doc_count | plus: 1 %}
+        {% unless doc_count == 1 %},{% endunless %}
+        {
+          "id": {{ doc_count }},
+          "title": {{ item.title | jsonify }},
+          "url": {{ item.url | relative_url | jsonify }},
+          "category": {{ item.category | default: 'Documentation' | jsonify }},
+          {% if item.date %}
+          "date": {{ item.date | date: '%Y-%m-%d' | jsonify }},
+          {% endif %}
+          {% if item.order %}
+          "order": {{ item.order }},
+          {% endif %}
+          "content": {{ item.content | strip_html | strip_newlines | jsonify }},
+          "excerpt": {{ item.excerpt | default: item.description | strip_html | strip_newlines | jsonify }}
+        }
+      {% endif %}
+    {% endfor %}
+  ]
+}
