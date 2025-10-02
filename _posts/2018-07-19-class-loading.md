@@ -24,14 +24,27 @@ By default (parent last), `PluginClassLoader` uses below strategy when a load cl
 - if the current PluginClassLoader cannot load the class, try to delegate to `PluginClassLoader`s of plugin's dependencies
 - delegate class load to parent class loader 
   
-Use `parentFirst` parameter of `PluginClassLoader` to change the loading strategy.  
-For example if I want to use a Parent First strategy in my application, all I must to achieve this is:
+Use `classLoadingStrategy` parameter of `PluginClassLoader` to change the loading strategy:
+```java
+// Default constructor (using PDA strategy)
+public PluginClassLoader(PluginManager pluginManager,
+                         PluginDescriptor pluginDescriptor,
+                         ClassLoader parent)
+
+// Constructor with strategy
+public PluginClassLoader(PluginManager pluginManager,
+                         PluginDescriptor pluginDescriptor,
+                         ClassLoader parent,
+                         ClassLoadingStrategy classLoadingStrategy)
+```
+
+For example if you want to use the parent first strategy (APD: Application -> Plugin -> plugin Dependencies) you can use:
 ```java
 new DefaultPluginManager() {
     
     @Override
     protected PluginClassLoader createPluginClassLoader(Path pluginPath, PluginDescriptor pluginDescriptor) {
-        return new PluginClassLoader(pluginManager, pluginDescriptor, getClass().getClassLoader(), true);
+        return new PluginClassLoader(pluginManager, pluginDescriptor, getClass().getClassLoader(), ClassLoadingStrategy.APD);
     }
 
 };
