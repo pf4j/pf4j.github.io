@@ -43,7 +43,8 @@ highlighter: rouge
 future: true
 
 # Exclude non-site files
-exclude: ['bin', 'README.md', '*.zargo']
+exclude: ['bin', 'README.md', '*.zargo', 'sourcey-api']
+include: ['api/_og']
 
 # Use the kramdown Markdown renderer
 markdown: kramdown

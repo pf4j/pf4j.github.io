@@ -1,0 +1,17 @@
+{
+  "name": "pf4j-sourcey-api",
+  "private": true,
+  "description": "Reproducible Sourcey API reference build for PF4J 3.15.0",
+  "scripts": {
+    "build": "sourcey build --output ../api",
+    "build:all": "bash scripts/build.sh",
+    "doxygen": "doxygen Doxyfile"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "moxygen": "2.1.12",
+    "sourcey": "3.6.5"
+  }
+}

@@ -1,5 +1,12 @@
 *.sw?
 _site
 _pages
+sourcey-api/.doxygen/
+sourcey-api/.generated/
+sourcey-api/.source/
+sourcey-api/node_modules/
+sourcey-api/doxygen-warnings.log
+__pycache__/
+*.py[cod]
 .idea/
 .jekyll-cache/
