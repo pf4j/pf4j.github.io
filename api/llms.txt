@@ -1,0 +1,105 @@
+# PF4J API Reference
+
+> Source-linked Java API documentation for PF4J 3.15.0.
+
+## Overview
+
+- [PF4J API Reference](/api/overview/overview.html): Source-linked Java API documentation for PF4J 3.15.0.
+
+## API Reference
+
+- [AbstractExtensionFinder](/api/reference/org-pf4j-abstractextensionfinder.html): **Author**: Decebal Suiu
+- [AbstractPluginManager](/api/reference/org-pf4j-abstractpluginmanager.html): This class implements the boilerplate plugin code that any `PluginManager` implementation would have to support.
+- [ResolveRecoveryStrategy](/api/reference/org-pf4j-abstractpluginmanager-resolverecoverystrategy.html): Strategy for handling the recovery of a plugin that could not be resolved (loaded) due to a dependency problem.
+- [BasePluginLoader](/api/reference/org-pf4j-basepluginloader.html): Load all information needed by a plugin.
+- [BasePluginRepository](/api/reference/org-pf4j-basepluginrepository.html): **Author**: Decebal Suiu
+- [ClassLoadingStrategy](/api/reference/org-pf4j-classloadingstrategy.html): `ClassLoadingStrategy` will be used to configure `PluginClassLoader` loading order and contains all possible options supported by `PluginClassLoader` where: A = Application Source (load classes from parent classLoader) P = Plugin Source (load classes from this classloader) D = Dependencies (load classes from dependencies) @endiliteral
+- [Source](/api/reference/org-pf4j-classloadingstrategy-source.html): Defined in `pf4j/src/main/java/org/pf4j/ClassLoadingStrategy.java:72`
+- [CompoundPluginDescriptorFinder](/api/reference/org-pf4j-compoundplugindescriptorfinder.html): **Author**: Decebal Suiu
+- [CompoundPluginLoader](/api/reference/org-pf4j-compoundpluginloader.html): A `PluginLoader` that delegates to a list of `PluginLoader`s.
+- [CompoundPluginRepository](/api/reference/org-pf4j-compoundpluginrepository.html): A `PluginRepository` that delegates to a list of `PluginRepository`s.
+- [DefaultExtensionFactory](/api/reference/org-pf4j-defaultextensionfactory.html): The default implementation for `ExtensionFactory`.
+- [DefaultExtensionFinder](/api/reference/org-pf4j-defaultextensionfinder.html): The default implementation for `ExtensionFinder`.
+- [DefaultPluginClasspath](/api/reference/org-pf4j-defaultpluginclasspath.html): The default values are `CLASSES_DIR` and #LIB_DIR.
+- [DefaultPluginDescriptor](/api/reference/org-pf4j-defaultplugindescriptor.html): **Author**: Decebal Suiu
+- [DefaultPluginFactory](/api/reference/org-pf4j-defaultpluginfactory.html): The default implementation for `PluginFactory`.
+- [DefaultPluginLoader](/api/reference/org-pf4j-defaultpluginloader.html): Load all information needed by a plugin from `DefaultPluginClasspath`.
+- [DefaultPluginManager](/api/reference/org-pf4j-defaultpluginmanager.html): Default implementation of the `PluginManager` interface.
+- [DefaultPluginRepository](/api/reference/org-pf4j-defaultpluginrepository.html): **Author**: Decebal Suiu
+- [DefaultPluginStatusProvider](/api/reference/org-pf4j-defaultpluginstatusprovider.html): The default implementation for `PluginStatusProvider`.
+- [DefaultVersionManager](/api/reference/org-pf4j-defaultversionmanager.html): Default implementation for `VersionManager`.
+- [DependencyResolver](/api/reference/org-pf4j-dependencyresolver.html): This class builds a dependency graph for a list of plugins (descriptors).
+- [CyclicDependencyException](/api/reference/org-pf4j-dependencyresolver-cyclicdependencyexception.html): It will be thrown if a cyclic dependency is detected.
+- [DependenciesNotFoundException](/api/reference/org-pf4j-dependencyresolver-dependenciesnotfoundexception.html): Indicates that the dependencies required were not found.
+- [DependenciesWrongVersionException](/api/reference/org-pf4j-dependencyresolver-dependencieswrongversionexception.html): Indicates that some dependencies have wrong version.
+- [Result](/api/reference/org-pf4j-dependencyresolver-result.html): The result of the `resolve(List)` operation.
+- [WrongDependencyVersion](/api/reference/org-pf4j-dependencyresolver-wrongdependencyversion.html): Represents a wrong dependency version.
+- [DevelopmentPluginClasspath](/api/reference/org-pf4j-developmentpluginclasspath.html): It's a compound `PluginClasspath` (`MAVEN` + `GRADLE` + `KOTLIN`) used in development mode (`RuntimeMode#DEVELOPMENT`).
+- [DevelopmentPluginLoader](/api/reference/org-pf4j-developmentpluginloader.html): Load all information needed by a plugin from `DevelopmentPluginClasspath`.
+- [DevelopmentPluginRepository](/api/reference/org-pf4j-developmentpluginrepository.html): **Author**: Decebal Suiu
+- [Extension](/api/reference/org-pf4j-extension.html): An extension is a class that extends an extension point.
+- [ExtensionDescriptor](/api/reference/org-pf4j-extensiondescriptor.html): Describes an extension.
+- [ExtensionFactory](/api/reference/org-pf4j-extensionfactory.html): Creates an extension instance.
+- [ExtensionFinder](/api/reference/org-pf4j-extensionfinder.html): Provides the functionality for finding extensions.
+- [ExtensionPoint](/api/reference/org-pf4j-extensionpoint.html): An extension point is a formal declaration in a plugin (or in application API) where customization is allowed.
+- [ExtensionWrapper](/api/reference/org-pf4j-extensionwrapper.html): A wrapper over extension instance.
+- [IndexedExtensionFinder](/api/reference/org-pf4j-indexedextensionfinder.html): All extensions declared in a plugin are indexed in a file META-INF/extensions.idx.
+- [InvalidPluginDescriptorException](/api/reference/org-pf4j-invalidplugindescriptorexception.html): This exception signals incomplete or wrong information in the descriptor for a plugin.
+- [JarPluginLoader](/api/reference/org-pf4j-jarpluginloader.html): **Author**: Decebal Suiu
+- [JarPluginManager](/api/reference/org-pf4j-jarpluginmanager.html): It's a `PluginManager` that loads each plugin from a jar file.
+- [JarPluginRepository](/api/reference/org-pf4j-jarpluginrepository.html): **Author**: Decebal Suiu
+- [LegacyExtensionFinder](/api/reference/org-pf4j-legacyextensionfinder.html): All extensions declared in a plugin are indexed in a file META-INF/extensions.idx.
+- [LoggingPluginStateListener](/api/reference/org-pf4j-loggingpluginstatelistener.html): It's an implementation of `PluginStateListener` that writes all events to logger (DEBUG level).
+- [ManifestPluginDescriptorFinder](/api/reference/org-pf4j-manifestplugindescriptorfinder.html): Read the plugin descriptor from the manifest file.
+- [Plugin](/api/reference/org-pf4j-plugin.html): This class will be extended by all plugins and serve as the common class between a plugin and the application.
+- [PluginAlreadyLoadedException](/api/reference/org-pf4j-pluginalreadyloadedexception.html): Thrown when a plugin is already loaded.
+- [PluginClassLoader](/api/reference/org-pf4j-pluginclassloader.html): One instance of this class should be created for every available plug-in.
+- [PluginClasspath](/api/reference/org-pf4j-pluginclasspath.html): The classpath of the plugin.
+- [PluginDependency](/api/reference/org-pf4j-plugindependency.html): A plugin dependency is a dependency that the plugin has on another plugin.
+- [PluginDescriptor](/api/reference/org-pf4j-plugindescriptor.html): A plugin descriptor contains information about a plug-in.
+- [PluginDescriptorFinder](/api/reference/org-pf4j-plugindescriptorfinder.html): Find a plugin descriptor for a plugin path.
+- [PluginFactory](/api/reference/org-pf4j-pluginfactory.html): It's responsible for creating a plugin instance.
+- [PluginLoader](/api/reference/org-pf4j-pluginloader.html): Load all information (classes) needed by a plugin.
+- [PluginManager](/api/reference/org-pf4j-pluginmanager.html): Provides the functionality for plugin management such as load, start and stop the plugins.
+- [PluginNotFoundException](/api/reference/org-pf4j-pluginnotfoundexception.html): Thrown when a plugin is not found.
+- [PluginRepository](/api/reference/org-pf4j-pluginrepository.html): Directory that contains plugins.
+- [PluginRuntimeException](/api/reference/org-pf4j-pluginruntimeexception.html): An exception used to indicate that a plugin problem occurred.
+- [PluginStateEvent](/api/reference/org-pf4j-pluginstateevent.html): Event object that indicates a change in the state of a plugin.
+- [PluginStateListener](/api/reference/org-pf4j-pluginstatelistener.html): Defines the interface for an object that listens to plugin state changes.
+- [PluginStatusProvider](/api/reference/org-pf4j-pluginstatusprovider.html): Provides a way to check if a plugin is disabled and to disable/enable a plugin.
+- [PluginWrapper](/api/reference/org-pf4j-pluginwrapper.html): A wrapper over plugin instance.
+- [PropertiesPluginDescriptorFinder](/api/reference/org-pf4j-propertiesplugindescriptorfinder.html): Find a plugin descriptor in a properties file (in plugin repository).
+- [RuntimeMode](/api/reference/org-pf4j-runtimemode.html): The runtime mode of the PF4J application.
+- [SecurePluginManagerWrapper](/api/reference/org-pf4j-securepluginmanagerwrapper.html): Use this class to wrap the original plugin manager to prevent full access from within plugins.
+- [PluginStateListenerWrapper](/api/reference/org-pf4j-securepluginmanagerwrapper-pluginstatelistenerwrapper.html): Wrapper for PluginStateListener events.
+- [ServiceProviderExtensionFinder](/api/reference/org-pf4j-serviceproviderextensionfinder.html): The `java.util.ServiceLoader` base implementation for `ExtensionFinder`.
+- [SingletonExtensionFactory](/api/reference/org-pf4j-singletonextensionfactory.html): An `ExtensionFactory` that always returns a specific instance.
+- [VersionManager](/api/reference/org-pf4j-versionmanager.html): Manager responsible for versions of plugins.
+- [ZipPluginManager](/api/reference/org-pf4j-zippluginmanager.html): It's a `PluginManager` that loads each plugin from a zip file.
+- [ExtensionInfo](/api/reference/org-pf4j-asm-extensioninfo.html): This class holds the parameters of an `org.pf4j.Extension` annotation defined for a certain class.
+- [ExtensionVisitor](/api/reference/org-pf4j-asm-extensionvisitor.html): This visitor extracts an `ExtensionInfo` from any class, that holds an `Extension` annotation.
+- [ExtensionAnnotationProcessor](/api/reference/org-pf4j-processor-extensionannotationprocessor.html): Processes `Extension` annotations and generates an `ExtensionStorage`.
+- [ExtensionStorage](/api/reference/org-pf4j-processor-extensionstorage.html): It's a storage (database) that persists `org.pf4j.Extension`s.
+- [IndexedExtensionStorage](/api/reference/org-pf4j-processor-indexedextensionstorage.html): Stores `org.pf4j.Extension`s in META-INF/extensions.idx.
+- [LegacyExtensionStorage](/api/reference/org-pf4j-processor-legacyextensionstorage.html): Stores `org.pf4j.Extension`s in META-INF/extensions.idx.
+- [ServiceProviderExtensionStorage](/api/reference/org-pf4j-processor-serviceproviderextensionstorage.html): Stores `org.pf4j.Extension`s in META-INF/services.
+- [AndFileFilter](/api/reference/org-pf4j-util-andfilefilter.html): This filter providing conditional AND logic across a list of file filters.
+- [ClassUtils](/api/reference/org-pf4j-util-classutils.html): **Author**: Decebal Suiu
+- [DirectedGraph](/api/reference/org-pf4j-util-directedgraph.html): See Wikipedia for more information.
+- [DirectoryFileFilter](/api/reference/org-pf4j-util-directoryfilefilter.html): Filter accepts files that are directories.
+- [ExtensionFileFilter](/api/reference/org-pf4j-util-extensionfilefilter.html): Filter accepts any file ending in extension.
+- [FileUtils](/api/reference/org-pf4j-util-fileutils.html): **Author**: Decebal Suiu
+- [HiddenFilter](/api/reference/org-pf4j-util-hiddenfilter.html): Filter that only accepts hidden files.
+- [JarFileFilter](/api/reference/org-pf4j-util-jarfilefilter.html): File filter that accepts all files ending with .JAR.
+- [NameFileFilter](/api/reference/org-pf4j-util-namefilefilter.html): Filter accepts any file with this name.
+- [NotFileFilter](/api/reference/org-pf4j-util-notfilefilter.html): This filter produces a logical NOT of the filters specified.
+- [OrFileFilter](/api/reference/org-pf4j-util-orfilefilter.html): This filter providing conditional OR logic across a list of file filters.
+- [StringUtils](/api/reference/org-pf4j-util-stringutils.html): **Author**: Decebal Suiu
+- [Unzip](/api/reference/org-pf4j-util-unzip.html): This class extracts the content of the plugin zip into a directory.
+- [ZipFileFilter](/api/reference/org-pf4j-util-zipfilefilter.html): File filter that accepts all files ending with .ZIP.
+- [lang](/api/reference/java-lang.html): lang
+- [org](/api/reference/org.html): org
+- [pf4j](/api/reference/org-pf4j.html): pf4j Classes Name Description AbstractExtensionFinder Author : Decebal Suiu AbstractPluginManager This class implements the boilerplate plu…
+- [asm](/api/reference/org-pf4j-asm.html): asm Classes Name Description ExtensionInfo This class holds the parameters of an [org.pf4j.Extension](org-pf4j-Extension.html#extension) an…
+- [processor](/api/reference/org-pf4j-processor.html): processor Classes Name Description ExtensionAnnotationProcessor Processes [Extension](org-pf4j-Extension.html#extension) annotations and ge…
+- [util](/api/reference/org-pf4j-util.html): util Classes Name Description AndFileFilter This filter providing conditional AND logic across a list of file filters. ClassUtils Author :…
